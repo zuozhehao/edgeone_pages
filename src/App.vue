@@ -30,7 +30,6 @@ export default {
       const value        = domain.replace('.', '_').toUpperCase();
       this.target_domain = domain;
       this.target_beian  = import.meta.env[`VITE_BEIAN_${value}`] || '';
-      console.log(import.meta.env);
     }
 };
 </script>
