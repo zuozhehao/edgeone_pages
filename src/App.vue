@@ -27,9 +27,9 @@ export default {
     mounted() {
       const hostname     = window.location.hostname;
       const domain       = hostname.split('.').slice(-2).join('.');
-      const value        = domain.replace('.', '_');
+      const value        = domain.replace('.', '_').toUpperCase();
       this.target_domain = domain;
-      this.target_beian  = import.meta.env[`BEIAN_${value}`] || '';
+      this.target_beian  = import.meta.env[`VITE_BEIAN_${value}`] || '';
       console.log(import.meta.env);
     }
 };
